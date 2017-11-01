@@ -1,0 +1,38 @@
+/*!
+* PSR
+* Copyright 2015 Philips Innovation Services
+*/
+
+// Includes
+@import "includes/variables";
+
+// Base
+@import "base/scaffolding";
+@import 'base/type';
+
+// Components
+@import 'components/evidence';
+@import "components/scores";
+@import "components/buttons";
+@import "components/table";
+@import 'components/matrix';
+@import 'components/dialog';
+@import 'components/energy_labels';
+@import 'components/flash_card_details';
+@import 'components/legend';
+@import "components/toast";
+@import "components/week_picker";
+
+// Layout
+@import "layout/layout";
+@import "layout/main";
+@import "layout/header";
+@import 'layout/responsive';
+@import "layout/sidebar";
+@import "layout/progress";
+@import "layout/print";
+
+// Helpers
+@import 'helpers/spacer';
+@import 'helpers/overflow';
+@import 'helpers/helpers';

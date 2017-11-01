@@ -1,0 +1,96 @@
+//
+// Legend
+// ------------------------------------------
+
+.card-toolbar {
+  position: relative;
+
+  .arrow_box {
+    position: relative;
+  }
+
+  .arrow_box:after, .arrow_box:before {
+    content: ' ';
+    position: absolute;
+    left: 753px;
+    border: solid transparent;
+    height: 0;
+    pointer-events: none;
+    width: 0;
+  }
+
+  .arrow_box.change-history-arrow {
+    left: -90px;
+  }
+
+  .arrow_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 12px;
+    bottom: -21px;
+    margin-left: -12px;
+  }
+
+  .arrow_box:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #9e9e9e;
+    border-width: 13px;
+    bottom: -20px;
+    margin-left: -13px;
+  }
+
+  .legend-container,
+  .history-container {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    font-size: 0.85em;
+    outline: none;
+    width: 783px;
+
+    .legend {
+      background: #fff;
+      border: 1px solid #9e9e9e;
+      border-radius: 5px;
+      padding: 8px;
+
+      table {
+        border: none;
+
+        tr {
+          min-height: 50px;
+        }
+      }
+
+      .energy-label {
+        margin: 5px 25px 5px 5px;
+      }
+
+      p {
+        margin: 5px;
+        color: #000;
+      }
+    }
+
+    .popover {
+      box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .14);
+      margin-top: 20px;
+    }
+
+    &.ng-hide-add,
+    &.ng-hide-remove {
+      display: block !important;
+      opacity: 1;
+      transition: 0.15s linear all;
+    }
+
+    &.ng-hide {
+      opacity: 0;
+    }
+  }
+
+  img {
+    height: 27px;
+    vertical-align: middle;
+  }
+}

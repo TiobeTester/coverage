@@ -1,0 +1,61 @@
+//
+// Flashcard details
+// ------------------------------------------
+
+.discussion-topic-details,
+.hover-aside {
+  transform: translateZ(0);
+}
+
+.hover-aside {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  i {
+    font-size: 100px;
+  }
+
+  &.dashboard-hover-aside {
+    align-items: center;
+  }
+}
+
+aside h2 {
+  color: #424242;
+  margin-top: 0;
+}
+
+aside p {
+  color: #757575;
+  //white-space: pre-wrap;
+}
+
+discussion-topic-matrix {
+  .hover-aside, .discussion-topic-details {
+    display: none;
+  }
+}
+
+@media (min-width: 1500px) {
+  discussion-topic-matrix {
+    .hover-aside, .discussion-topic-details {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 1499px) {
+  discussion-topic-matrix {
+    div.matrix-container {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.dashboard-table-wrapper {
+  aside {
+    position: fixed;
+    width: 450px;
+  }
+}

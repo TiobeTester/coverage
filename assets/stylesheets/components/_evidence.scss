@@ -1,0 +1,60 @@
+//
+// Evidence
+// ------------------------------------------
+
+.evidence-placeholder {
+  border: 3px dashed #ccc;
+  width: $evidance-img-width;
+  height: $evidance-img-height;
+  margin-top: 24px;
+  box-sizing: border-box;
+  
+  &:after {
+    content: 'Paste the image here \A (CTRL/CMD + V)';
+    color: #ccc;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    white-space: pre;
+
+    @extend .align-vertical;
+  }
+}
+
+.evidence-img {
+  position: relative;
+  width: $evidance-img-width;
+  height: $evidance-img-height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  @media print {
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+}
+
+.evidence-img-removed {
+  opacity: 0.5;
+}
+
+.evidence-img-sm {
+  height: 120px;
+}
+
+.evidence-container {
+  width: $evidence-container-width;
+  padding-right: $spacer;
+}
+
+.evidence-delete-icon {
+  position: relative;
+  top: 40px;
+  left: 10px;
+  width: 25px;
+  color: $score-flag;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  user-select: none;
+}

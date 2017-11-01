@@ -1,0 +1,33 @@
+//
+// Print
+// ------------------------------------------
+
+.print-text-small {
+  @media print {
+    font-size: 25%;
+  }
+}
+
+.print-text-medium {
+  @media print {
+    font-size: 50%;
+  }
+}
+
+.print-text-large {
+  @media print {
+    font-size: 75%;
+  }
+}
+
+.print-text-extra-large {
+  @media print {
+    font-size: 100%;
+  }
+}
+
+.hidden-print {
+  @media print {
+    display: none !important;
+  }
+}

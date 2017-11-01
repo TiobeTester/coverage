@@ -1,0 +1,41 @@
+//
+// Variables
+// ------------------------------------------
+
+// Colors
+$score-ok: #4caf50;
+$score-risk: #ffc107;
+$score-flag: #e91e63;
+$score-na: #D3D3D3;
+
+$color-indigo: #3F51B5;
+$color-indigo-800: #283593;
+$color-blue: #2196F3;
+
+// Scaffolding
+$body-bg: #f5f5f5;
+$text-color: #000000;
+$link-color: #000000;
+
+// Type
+$text-muted: #757575;
+
+// Buttons
+$btn-active-bg: rgba(158, 158, 158, 0.2);
+
+// Spacer
+$spacer: 16px !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+// Evidence
+$evidence-container-width: 250px;
+$evidance-img-width: 250px;
+$evidance-img-height: 200px;
+
+// Timeline
+$timeline-bg: rgb(117, 117, 117);
+
+// Table
+$bg-bottom-line: rgb(225, 225, 225);
+$matrix-spacer: 8px;

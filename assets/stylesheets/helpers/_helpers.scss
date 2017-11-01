@@ -1,0 +1,63 @@
+//
+// Helpers
+// ------------------------------------------
+
+.max-box {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.full-height {
+  height: 100% !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.no-outline {
+  outline: none !important;
+}
+
+// Positions
+.pos-absolute {
+  position: absolute;
+  top: 0;
+}
+
+.pos-top-0 {
+  top: 0 !important;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.width-inherit {
+  width: inherit !important;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+// Browser detection
+#detect-browser {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-indigo;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  z-index: 99999;
+
+  & a:link, a:visited {
+    color: #FFF;
+  }
+}

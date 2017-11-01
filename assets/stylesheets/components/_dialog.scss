@@ -1,0 +1,326 @@
+//
+// Dialog
+// ------------------------------------------
+
+.flash-card-dialog {
+  overflow: hidden;
+  @media screen and (min-width: 1300px) {
+    min-width: 1100px;
+  }
+
+  md-dialog-content {
+    padding: 0;
+
+    &.learn-layout {
+      padding: 15px 0 0;
+    }
+  }
+
+  .confirmation-template {
+    padding: 15px;
+  }
+
+  .md-toolbar-tools {
+    align-items: baseline;
+    flex-direction: column;
+
+    .context {
+      margin-top: 3px;
+    }
+
+    .squad-name {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    h2 {
+      margin-top: 18px;
+    }
+
+    h3 {
+      font-size: 0.7em;
+    }
+
+    &.how-to-go {
+      flex-direction: initial;
+
+      button {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .timeline {
+    position: absolute;
+    top: 91px;
+    left: 80px;
+    right: 100px;
+    background-color: $timeline-bg;
+    height: 1px;
+    box-sizing: border-box;
+  }
+
+  .flash-card-dialog-navigation {
+    justify-content: space-between;
+
+    md-radio-button {
+      text-align: center;
+    }
+
+    md-radio-button .md-container {
+      background: #fff;
+    }
+
+    .md-label {
+      display: block;
+      margin-left: 0;
+    }
+  }
+
+  .md-dialog-content {
+    padding-top: 24px;
+  }
+
+  md-dialog-content > div {
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 555px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dialog-content-column {
+      border-right: 1px solid #9e9e9e;
+      padding: 0 15px;
+      overflow-y: auto;
+
+      &:last-child, &.last {
+        border-right: none;
+      }
+    }
+
+    .reason-and-further-information {
+      .reason {
+        flex-grow: 0;
+        margin-bottom: 30px;
+      }
+
+      ul {
+        a {
+          overflow-wrap: break-word;
+        }
+      }
+
+      .previous-scores {
+        max-height: 260px;
+        overflow-y: auto;
+
+        ul {
+          margin: 10px 0 0 15px;
+
+          li {
+            h3 {
+              display: inline-block;
+
+              &.energy-label {
+                margin-right: 30px;
+                padding-right: 30px;
+
+                &.risk {
+                  padding-right: 37px;
+                }
+
+                &.ok {
+                  padding-right: 51px;
+                }
+              }
+            }
+            margin: 0 0 30px;
+          }
+
+          li:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .examples {
+      height: 350px;
+      justify-content: space-between;
+    }
+
+    .scale {
+      height: 350px;
+      display: flex;
+      justify-content: center;
+
+      md-radio-group {
+        margin: 20px 0 40px;
+        justify-content: space-between;
+        max-height: 440px;
+
+        md-radio-button {
+          margin: 0;
+        }
+      }
+    }
+
+    .comments {
+      margin-left: 1px;
+
+      dl {
+        margin-top: 0;
+      }
+
+      md-input-container {
+        padding-bottom: 0;
+      }
+    }
+
+    .goals {
+      .add-button {
+        color: rgba(0, 0, 0, 0.54);
+        top: 7px;
+      }
+
+      button {
+        //height: 20px;
+        bottom: 10px;
+        width: 100%;
+
+        &.hidden {
+          visibility: hidden;
+        }
+
+        &.md-icon-button {
+          margin-left: 0;
+          width: 48px;
+          bottom: 2px;
+
+          &.delete-button {
+            margin-left: 20px;
+          }
+
+          &.blinking {
+            animation: blinker 1s linear infinite;
+          }
+
+          @keyframes blinker {
+            50% {
+              opacity: 0.0;
+            }
+          }
+        }
+      }
+
+      ul {
+        max-height: 470px;
+        overflow-y: auto;
+
+        md-input-container {
+          flex: 66;
+        }
+
+        md-menu {
+          width: 116px;
+        }
+      }
+    }
+
+    md-list-item {
+      padding: 0;
+    }
+
+    .compact-goals {
+      h3 {
+        margin-bottom: 42px;
+      }
+
+      md-list-item {
+        height: 64px;
+      }
+
+      md-list-item {
+        overflow: hidden;
+      }
+
+      md-input-container {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        outline: none;
+        width: 100%;
+
+        &.current-goal {
+          background-color: lightgray;
+        }
+      }
+
+      input {
+        cursor: pointer;
+        text-overflow: ellipsis;
+        color: black;
+      }
+    }
+    .acceptance-criteria, .compact-goals {
+      md-list-item {
+        overflow: hidden;
+        padding: 0;
+      }
+
+      md-input-container {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        outline: none;
+      }
+    }
+    .acceptance-criteria {
+      md-input-container {
+        width: 100%;
+      }
+
+      textarea {
+        overflow-y: auto;
+      }
+
+      ul {
+        height: 195px;
+        overflow-y: auto;
+        button {
+          bottom: 10px;
+        }
+      }
+
+      .acceptance-criteria-content {
+        height: 210px;
+        md-input-container {
+          height: 190px !important;
+        }
+      }
+
+      .learned {
+        height: 483px;
+      }
+
+      .actions-content {
+        md-checkbox .md-container {
+          left: 8px;
+          top: 9px;
+        }
+      }
+    }
+
+    md-input-container .deleted {
+      text-decoration: line-through;
+      color: red;
+    }
+  }
+}
+
+md-backdrop.md-sidenav-backdrop {
+  display: none;
+}

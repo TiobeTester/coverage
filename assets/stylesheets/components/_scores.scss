@@ -1,0 +1,80 @@
+//
+// Scores
+// ------------------------------------------
+
+.ok {
+  background-color: $score-ok !important;
+
+  @media print {
+    background-color: $score-ok !important;
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+}
+
+.risk {
+  background-color: $score-risk !important;
+
+  @media print {
+    background-color: $score-risk !important;
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+}
+
+.flag {
+  background-color: $score-flag !important;
+
+  @media print {
+    background-color: $score-flag !important;
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+}
+
+.na {
+  background-color: $score-na !important;
+
+  @media print {
+    background-color: $score-na !important;
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+}
+
+.score {
+  text-align: center;
+  border: 2px solid transparent;
+
+  &.flag:before,
+  &.risk:before,
+  &.ok:before,
+  &.na:before {
+    color: #FFF;
+  }
+
+  &.flag {
+    &:before {
+      content: 'FLAG';
+    }
+  }
+
+  &.risk {
+    &:before {
+      content: 'RISK';
+    }
+  }
+
+  &.ok {
+    &:before {
+      content: 'OK';
+    }
+  }
+
+  &.na {
+    &:before {
+      content: 'N/A';
+    }
+  }
+
+  &.border {
+    border: 2px solid $color-indigo;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,154 @@
+//
+// Energy Label
+// ------------------------------------------
+
+.energy-label {
+  border: 1px solid transparent;
+  border-bottom-left-radius: 4px;
+  border-right: none;
+  border-top-left-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-top: 8px;
+  position: relative;
+  text-transform: none;
+  font-weight: 500;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    border: solid transparent;
+    border-radius: 2px;
+    border-color: rgba(136, 183, 213, 0);
+    border-width: 19px;
+    height: 1px;
+    margin-top: -19px;
+    pointer-events: none;
+    width: 0;
+  }
+
+  &.medium {
+    font-size: .75em;
+
+    &:after {
+      border-width: 16px;
+      margin-top: -16px;
+    }
+  }
+
+  &.small {
+    font-size: .5em;
+
+    &:after {
+      border-width: 14px;
+      margin-top: -14px;
+    }
+  }
+
+  &.na {
+    background-color: $score-na;
+    padding-right: 0;
+
+    &:after {
+      border-left-color: $score-na;
+    }
+
+    &.medium {
+      padding-right: 45px;
+    }
+
+    &.small {
+      padding-right: 30px;
+    }
+  }
+
+  &.ok {
+    background-color: $score-ok;
+    padding-right: 20px;
+
+    &:after {
+      border-left-color: $score-ok;
+    }
+
+    &.medium {
+      padding-right: 15px;
+    }
+
+    &.small {
+      padding-right: 10px;
+    }
+  }
+
+  &.risk {
+    background-color: $score-risk;
+    padding-right: 60px;
+
+    &:after {
+      border-left-color: $score-risk;
+    }
+
+    &.medium {
+      padding-right: 45px;
+    }
+
+    &.small {
+      padding-right: 30px;
+    }
+  }
+
+  &.flag {
+    background-color: $score-flag;
+    padding-right: 100px;
+
+    &:after {
+      border-left-color: $score-flag;
+    }
+
+    &.medium {
+      padding-right: 75px;
+    }
+
+    &.small {
+      padding-right: 50px;
+    }
+  }
+
+  &.no-rating {
+    background-color: rgb(63, 81, 181);
+    color: white;
+    font-weight: normal;
+
+    @media print {
+      background-color: rgb(63, 81, 181) !important;
+      -webkit-print-color-adjust: exact; // Works only in Chrome
+    }
+
+    &:after {
+      border-left-color: rgb(63, 81, 181);
+    }
+
+    &.medium {
+      padding-right: 75px;
+    }
+
+    &.small {
+      padding-right: 50px;
+    }
+  }
+}
+
+.energy-label-md-menu {
+  height: 38px;
+  padding-top: 0;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.energy-label-fixed-height {
+  height: 21px;
+}

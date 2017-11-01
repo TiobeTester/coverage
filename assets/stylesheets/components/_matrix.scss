@@ -1,0 +1,183 @@
+//
+// Matrix
+// ------------------------------------------
+
+.date-and-score {
+  dd {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+
+  dd, dt {
+    display: inline-block;
+  }
+}
+
+.card-toolbar {
+  background-color: #64b5f6;
+}
+
+.select-subject-paragraph {
+  margin: 32px 32px 0 32px;
+}
+
+.topic {
+  background-color: lightgray;
+
+  @media print {
+    background-color: lightgray;
+    -webkit-print-color-adjust: exact; // Works only in Chrome
+  }
+
+  .md-button, div {
+    padding: 10px;
+    text-align: left;
+    min-width: 240px;
+    border-radius: 5px;
+
+    .name {
+      float: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
+    }
+
+    .score {
+      float: right;
+    }
+  }
+
+  &.sub-key-process-area {
+    padding-right: 2px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.breadcrumb-separator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.discussion-topics-matrix {
+  border-collapse: separate;
+  border-spacing: $matrix-spacer;
+  margin-left: -$matrix-spacer;
+
+  thead {
+    h3 {
+      font-size: initial;
+      width: 80%;
+    }
+  }
+
+  tbody {
+    td {
+      cursor: pointer;
+      border-radius: 5px;
+      vertical-align: top;
+
+      &.subtable {
+        & > .subMetric:first-child {
+          margin-top: -$matrix-spacer / 2;
+        }
+
+        & > .subMetric:last-child {
+          margin-bottom: -$matrix-spacer / 2;
+        }
+      }
+
+      &.subtable, &.metrics, &.disabled {
+        cursor: initial;
+
+        .metric {
+          cursor: pointer;
+
+          &.disabled {
+            cursor: initial;
+          }
+        }
+      }
+    }
+  }
+
+  .squad {
+    position: relative;
+
+    div {
+      width: 145px;
+      min-width: 90px;
+    }
+    span {
+      position: absolute;
+      top: 10px;
+    }
+    span:last-child {
+      top: initial;
+      bottom: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 $matrix-spacer;
+    min-height: 32px;
+
+    li {
+      cursor: pointer;
+      margin: 0 0 $matrix-spacer 0;
+      border-radius: 5px;
+      outline: 0;
+
+      div {
+        background-color: transparent;
+      }
+    }
+
+    li:first-child {
+      margin-top: 0;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 $matrix-spacer / 2;
+
+    & .metrics {
+
+      & td:first-child {
+        border-spacing: 0;
+      }
+
+      & .metric {
+        padding-top: $matrix-spacer;
+      }
+    }
+  }
+
+  td:first-child {
+    div.subMetric {
+      margin: -5px;
+    }
+  }
+
+  td:focus {
+    outline: none;
+  }
+}
+
+.subheader {
+  display: flex;
+
+  div {
+    width: 50%;
+  }
+}

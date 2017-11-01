@@ -1,0 +1,21 @@
+//
+// Scaffolding
+// ------------------------------------------
+
+body {
+  background: $body-bg;
+}
+
+a {
+  cursor: pointer;
+  outline: none;
+  color: $color-indigo;
+}
+
+hr {
+  margin-top:    20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
